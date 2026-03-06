@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="食堂 西のうめぼしのお料理ページ。名物の肉豆腐、ごちポテト、天ぷら・おでん、〆のちゃんぽんまで。">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,87 +14,31 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="page-menu">
+<body class="page-menu" data-page="menu">
 <div id="top"></div>
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-brand">
-      <a href="./index.html" class="site-logo">【公式】食堂 西のうめぼし</a>
-      <div class="site-tagline">西新で15時から呑める大衆食堂</div>
-    </div>
-    <div class="header-right">
-      <div class="header-tel header-only-desktop">
-        <span class="tel-label">ご予約・お問い合わせ</span>
-        <a href="tel:0924071400" class="tel-number">092-407-1400</a>
-      </div>
-      <a href="#" class="btn-primary header-reserve header-only-desktop">
-        ネット予約はこちら</a>
-      
-      <button class="nav-toggle" type="button" aria-expanded="false">
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
-    </div>
-  </div>
-
-  <!-- PC用ナビ（下層ページは “各ページ” にリンクする） -->
-  <nav class="global-nav header-only-desktop">
-    <ul>
-      <li><a href="./index.html#top">トップ</a></li>
-      <li><a href="./index.html#concept">西のうめぼしのこだわり</a></li>
-      <li><a href="./course.html">ご宴会コース</a></li>
-      <li><a href="./menu.html" aria-current="page">お料理</a></li>
-      <li><a href="./drink.html">ドリンク</a></li>
-      <li><a href="./index.html#space">店内・空間</a></li>
-      <li><a href="./index.html#blog">ブログ・お知らせ</a></li>
-      <li><a href="./index.html#reserve">ご予約について</a></li>
-      <li><a href="./index.html#access">アクセス</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <!-- スマホ用 -->
-  <div class="drawer-overlay" id="drawerOverlay" data-close="drawer" aria-hidden="true"></div>
-  <aside class="drawer" id="drawerMenu" aria-label="スマホメニュー" aria-hidden="true">
-    <button class="drawer-close" type="button" aria-label="閉じる" data-close="drawer">×</button>
-    <nav>
-      <ul>
-        <li><a href="./index.html#top">トップ</a></li>
-        <li><a href="./index.html#concept">一期のこだわり</a></li>
-        <li><a href="./course.html">ご宴会コース</a></li>
-        <li><a href="./menu.html" aria-current="page">お料理</a></li>
-        <li><a href="./drink.html">ドリンク</a></li>
-        <li><a href="./index.html#space">店内・空間</a></li>
-        <li><a href="./index.html#blog">ブログ・お知らせ</a></li>
-        <li><a href="./index.html#reserve">ご予約について</a></li>
-        <li><a href="./index.html#access">アクセス</a></li>
-      </ul>
-    </nav>
-  </aside>
+<!-- ★ 共通ヘッダー差し込み先 -->
+<div id="shared-header"></div>
 
 <main id="main">
 
-<!-- 名物：西うめ料理 -->
-<section class="section is-inview menu-page">
-  <div class="section-inner">
-
-    <h1 class="page-title">お料理</h1>
-    <p class="page-lead">
-      名物の肉豆腐、ごちポテト、天ぷら・おでん、〆のちゃんぽんまで。
-    </p>
-
-    <!-- 名物 画像 -->
-    <div class="menu-feature-image">
-      <img src="./images/topic-nikupotato.jpg" alt="西のうめぼし 名物料理">
+  <!-- ページ見出し -->
+  <section class="section is-inview menu-page" style="padding-top: calc(var(--header-h) + 16px) !important;">
+    <div class="section-inner">
+      <h1 class="page-title">お料理</h1>
+      <p class="page-lead">
+        名物の肉豆腐、ごちポテト、天ぷら・おでん、〆のちゃんぽんまで。
+      </p>
+      <div class="menu-feature-image">
+        <img src="./images/topic-nikupotato.jpg" alt="西のうめぼし 名物料理">
+      </div>
     </div>
-</div>
-</section>
+  </section>
 
+  <!-- 名物 -->
   <section class="section is-inview menu-page menu-page--meat">
     <div class="section-inner">
-    <h2 class="section-title">名物料理</h2>
+      <h2 class="section-title">名物料理</h2>
 
       <div class="mp-grid mp-grid--feature">
         <div class="mp-card">
@@ -107,164 +50,109 @@
           <div class="mp-card__price">620円</div>
         </div>
       </div>
-
     </div>
   </section>
 
-   <!-- 西うめ　料理・おつまみ -->
+  <!-- おつまみ・一品 -->
   <section class="section is-inview menu-page menu-page--meat">
-  <div class="section-inner">
-    <h2 class="section-title">おつまみ・一品</h2>
-    <p class="section-lead">飯・炙りもん・すぐ出る</p>
+    <div class="section-inner">
+      <h2 class="section-title">おつまみ・一品</h2>
+      <p class="section-lead">飯・炙りもん・すぐ出る</p>
 
-    <div class="mp-grid mp-grid--3">
+      <div class="mp-grid mp-grid--3">
 
-      <!-- 飯 + 炙りもん（1ブロックにまとめる） -->
-      <article class="mp-panel">
-        <div class="mp-panel__title">飯</div>
-        <ul class="mp-list">
-          <li class="mp-item"><span>ライス 小</span><span>170円</span></li>
-          <li class="mp-item"><span>ライス 中</span><span>220円</span></li>
-          <li class="mp-item"><span>ライス 大</span><span>280円</span></li>
-          <li class="mp-item"><span>ライス 丼</span><span>390円</span></li>
-          <li class="mp-item"><span>黒チャーハン</span><span>720円</span></li>
-          <li class="mp-item"><span>チャーシュー飯</span><span>770円</span></li>
-          <li class="mp-item"><span>てん重</span><span>880円</span></li>
-          <li class="mp-item"><span>五目チャンポン</span><span>770円</span></li>
-          <li class="mp-item"><span>ピリ辛坦々麺</span><span>880円</span></li>
-        </ul>
+        <!-- 飯 + 炙りもん -->
+        <article class="mp-panel">
+          <div class="mp-panel__title">飯</div>
+          <ul class="mp-list">
+            <li class="mp-item"><span>ライス 小</span><span>170円</span></li>
+            <li class="mp-item"><span>ライス 中</span><span>220円</span></li>
+            <li class="mp-item"><span>ライス 大</span><span>280円</span></li>
+            <li class="mp-item"><span>ライス 丼</span><span>390円</span></li>
+            <li class="mp-item"><span>黒チャーハン</span><span>720円</span></li>
+            <li class="mp-item"><span>チャーシュー飯</span><span>770円</span></li>
+            <li class="mp-item"><span>てん重</span><span>880円</span></li>
+            <li class="mp-item"><span>五目チャンポン</span><span>770円</span></li>
+            <li class="mp-item"><span>ピリ辛坦々麺</span><span>880円</span></li>
+          </ul>
 
-        <hr class="mp-hr">
+          <hr class="mp-hr">
 
-        <div class="mp-panel__title">炙りもん！</div>
-        <ul class="mp-list">
-          <li class="mp-item"><span>めざし</span><span>330円</span></li>
-          <li class="mp-item"><span>きびなご炙り</span><span>330円</span></li>
-          <li class="mp-item"><span>自家製 鶏みりん</span><span>420円</span></li>
-          <li class="mp-item"><span>えいひれ</span><span>420円</span></li>
-          <li class="mp-item"><span>スルメイカ丸干し</span><span>420円</span></li>
-          <li class="mp-item"><span>さわら西京焼</span><span>550円</span></li>
-        </ul>
-      </article>
+          <div class="mp-panel__title">炙りもん！</div>
+          <ul class="mp-list">
+            <li class="mp-item"><span>めざし</span><span>330円</span></li>
+            <li class="mp-item"><span>きびなご炙り</span><span>330円</span></li>
+            <li class="mp-item"><span>自家製 鶏みりん</span><span>420円</span></li>
+            <li class="mp-item"><span>えいひれ</span><span>420円</span></li>
+            <li class="mp-item"><span>スルメイカ丸干し</span><span>420円</span></li>
+            <li class="mp-item"><span>さわら西京焼</span><span>550円</span></li>
+          </ul>
+        </article>
 
-      <!-- すぐ出る -->
-      <article class="mp-panel">
-        <div class="mp-panel__title">すぐ出る！</div>
-        <ul class="mp-list">
-          <li class="mp-item"><span>枝豆</span><span>220円</span></li>
-          <li class="mp-item"><span>二色らっきょう</span><span>280円</span></li>
-          <li class="mp-item"><span>がり塩トマト</span><span>280円</span></li>
-          <li class="mp-item"><span>塩きゅうり</span><span>280円</span></li>
-          <li class="mp-item"><span>セロリサラダ</span><span>390円</span></li>
-          <li class="mp-item"><span>スパサラ（カレー味）</span><span>330円</span></li>
-          <li class="mp-item"><span>味玉ポテトサラダ</span><span>330円</span></li>
-          <li class="mp-item"><span>中華酢もつ</span><span>330円</span></li>
-          <li class="mp-item"><span>つぶ貝わさび</span><span>390円</span></li>
-          <li class="mp-item"><span>中華くらげ</span><span>390円</span></li>
-          <li class="mp-item"><span>鯛味噌きゅうり</span><span>420円</span></li>
-          <li class="mp-item"><span>よだれ鶏</span><span>500円</span></li>
-          <li class="mp-item"><span>ねぎ味噌クリームチーズ</span><span>500円</span></li>
-          <li class="mp-item"><span>夢のコンビネーションサラダ</span><span>520円</span></li>
-          <li class="mp-item"><span>炙りしめ鯖</span><span>530円</span></li>
-          <li class="mp-item"><span>スモークサーモン生春巻き</span><span>550円</span></li>
-          <li class="mp-item"><span>ごまかんぱち</span><span>610円</span></li>
-          <li class="mp-item"><span>あん肝ぽんず</span><span>550円</span></li>
-        </ul>
-      </article>
+        <!-- すぐ出る -->
+        <article class="mp-panel">
+          <div class="mp-panel__title">すぐ出る！</div>
+          <ul class="mp-list">
+            <li class="mp-item"><span>枝豆</span><span>220円</span></li>
+            <li class="mp-item"><span>二色らっきょう</span><span>280円</span></li>
+            <li class="mp-item"><span>がり塩トマト</span><span>280円</span></li>
+            <li class="mp-item"><span>塩きゅうり</span><span>280円</span></li>
+            <li class="mp-item"><span>セロリサラダ</span><span>390円</span></li>
+            <li class="mp-item"><span>スパサラ（カレー味）</span><span>330円</span></li>
+            <li class="mp-item"><span>味玉ポテトサラダ</span><span>330円</span></li>
+            <li class="mp-item"><span>中華酢もつ</span><span>330円</span></li>
+            <li class="mp-item"><span>つぶ貝わさび</span><span>390円</span></li>
+            <li class="mp-item"><span>中華くらげ</span><span>390円</span></li>
+            <li class="mp-item"><span>鯛味噌きゅうり</span><span>420円</span></li>
+            <li class="mp-item"><span>よだれ鶏</span><span>500円</span></li>
+            <li class="mp-item"><span>ねぎ味噌クリームチーズ</span><span>500円</span></li>
+            <li class="mp-item"><span>夢のコンビネーションサラダ</span><span>520円</span></li>
+            <li class="mp-item"><span>炙りしめ鯖</span><span>530円</span></li>
+            <li class="mp-item"><span>スモークサーモン生春巻き</span><span>550円</span></li>
+            <li class="mp-item"><span>ごまかんぱち</span><span>610円</span></li>
+            <li class="mp-item"><span>あん肝ぽんず</span><span>550円</span></li>
+          </ul>
+        </article>
 
-      <!-- あったか -->
-      <article class="mp-panel">
-        <div class="mp-panel__title">あったかおつまみ！</div>
-        <ul class="mp-list">
-          <li class="mp-item"><span>名物！肉豆腐</span><span>610円</span></li>
-          <li class="mp-item"><span>かりかり鶏皮（2本）</span><span>280円</span></li>
-          <li class="mp-item"><span>コロッケメンチ</span><span>390円</span></li>
-          <li class="mp-item"><span>チーズワンタン</span><span>420円</span></li>
-          <li class="mp-item"><span>蒸しシュウマイ</span><span>420円</span></li>
-          <li class="mp-item"><span>さきいか天ぷら</span><span>420円</span></li>
-          <li class="mp-item"><span>スタミナ茄子味噌</span><span>500円</span></li>
-          <li class="mp-item"><span>肉厚アジフライ</span><span>420円</span></li>
-          <li class="mp-item"><span>めひかり唐揚げ</span><span>500円</span></li>
-          <li class="mp-item"><span>揚げもろこし</span><span>500円</span></li>
-          <li class="mp-item"><span>揚げキムチ餃子</span><span>500円</span></li>
-          <li class="mp-item"><span>ふわとろにら玉</span><span>420円</span></li>
-          <li class="mp-item"><span>ぶっかけ水餃子</span><span>530円</span></li>
-          <li class="mp-item"><span>チキン南蛮</span><span>610円</span></li>
-          <li class="mp-item"><span>牛タンテキ</span><span>1,080円</span></li>
-        </ul>
-      </article>
+        <!-- あったか -->
+        <article class="mp-panel">
+          <div class="mp-panel__title">あったかおつまみ！</div>
+          <ul class="mp-list">
+            <li class="mp-item"><span>名物！肉豆腐</span><span>610円</span></li>
+            <li class="mp-item"><span>かりかり鶏皮（2本）</span><span>280円</span></li>
+            <li class="mp-item"><span>コロッケメンチ</span><span>390円</span></li>
+            <li class="mp-item"><span>チーズワンタン</span><span>420円</span></li>
+            <li class="mp-item"><span>蒸しシュウマイ</span><span>420円</span></li>
+            <li class="mp-item"><span>さきいか天ぷら</span><span>420円</span></li>
+            <li class="mp-item"><span>スタミナ茄子味噌</span><span>500円</span></li>
+            <li class="mp-item"><span>肉厚アジフライ</span><span>420円</span></li>
+            <li class="mp-item"><span>めひかり唐揚げ</span><span>500円</span></li>
+            <li class="mp-item"><span>揚げもろこし</span><span>500円</span></li>
+            <li class="mp-item"><span>揚げキムチ餃子</span><span>500円</span></li>
+            <li class="mp-item"><span>ふわとろにら玉</span><span>420円</span></li>
+            <li class="mp-item"><span>ぶっかけ水餃子</span><span>530円</span></li>
+            <li class="mp-item"><span>チキン南蛮</span><span>610円</span></li>
+            <li class="mp-item"><span>牛タンテキ</span><span>1,080円</span></li>
+          </ul>
+        </article>
 
+      </div>
+
+      <p class="mp-note">
+        ※仕入れ・時期により内容や価格が変わる場合があります。<br>
+        お問い合わせ：<a href="tel:0924071400">092-407-1400</a>
+      </p>
     </div>
+  </section>
 
-    <p class="mp-note">
-      ※仕入れ・時期により内容や価格が変わる場合があります。<br>
-      お問い合わせ：<a href="tel:0924071400">092-407-1400</a>
-    </p>
-  </div>
-</section>
-
-  <!-- 共通下部を差し込む場所（予約〜アクセス〜フッター） -->
+  <!-- ★ 共通フッター差し込み先 -->
   <div id="shared-bottom"></div>
-  
-  <!-- ページトップボタン（右下固定：全ページ共通） -->
+
+  <!-- ページトップ -->
   <a href="#top" class="page-top" aria-label="ページの先頭へ戻る">＾</a>
 
 </main>
 
-<script>
-  // Drawer
-  const btn = document.querySelector('.nav-toggle');
-  const drawer = document.querySelector('#drawerMenu');
-  const overlay = document.querySelector('#drawerOverlay');
-
-  function openDrawer(){
-    drawer.classList.add('is-open');
-    overlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-    btn?.setAttribute('aria-expanded', 'true');
-    drawer?.setAttribute('aria-hidden', 'false');
-    overlay?.setAttribute('aria-hidden', 'false');
-  }
-  function closeDrawer(){
-    drawer.classList.remove('is-open');
-    overlay.classList.remove('is-open');
-    document.body.style.overflow = '';
-    btn?.setAttribute('aria-expanded', 'false');
-    drawer?.setAttribute('aria-hidden', 'true');
-    overlay?.setAttribute('aria-hidden', 'true');
-  }
-
-  btn?.addEventListener('click', () => drawer.classList.contains('is-open') ? closeDrawer() : openDrawer());
-  document.querySelectorAll('[data-close="drawer"]').forEach(el => el.addEventListener('click', closeDrawer));
-  drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-
-  // 共通下部（予約〜フッター）を読み込む
-  // ※ menu.html がルート直下ならこのまま。サブフォルダなら ../partials/bottom.html に直す
-  fetch('./partials/bottom.html')
-    .then(r => r.text())
-    .then(html => {
-      const mount = document.querySelector('#shared-bottom');
-      if (!mount) return;
-      mount.innerHTML = html;
-
-      // 差し込まれたsectionも “必ず表示”
-      mount.querySelectorAll('.section').forEach(sec => sec.classList.add('is-inview'));
-    })
-    .catch(() => {
-      // 読み込み失敗しても本文は見える（is-inviewをHTML側で付けてるため）
-    });
-
-  // ページトップボタン：一定スクロールで表示
-  const pageTop = document.querySelector('.page-top');
-  function togglePageTop(){
-    if(!pageTop) return;
-    const y = window.scrollY || document.documentElement.scrollTop;
-    if (y > 480) pageTop.classList.add('is-show');
-    else pageTop.classList.remove('is-show');
-  }
-  window.addEventListener('scroll', togglePageTop, { passive: true });
-  togglePageTop();
-</script>
-
+<script src="./common.js"></script>
 </body>
 </html>
