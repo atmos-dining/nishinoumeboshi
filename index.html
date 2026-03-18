@@ -90,6 +90,13 @@ function trackAndGo(eventName, label, url){
 
   <!-- メインビジュアル -->
   <section class="hero">
+    <!-- スライドショー背景 -->
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide is-active" style="background-image:url('./images/hero-nishiume.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./images/hero-bunta.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./images/space-nishiume.jpg')"></div>
+    </div>
+
     <div class="hero-inner">
       <p class="hero-eyebrow">- 西新で15時から呑める大衆食堂 -</p>
       <h1 class="hero-title">食堂 西のうめぼし</h1>
@@ -337,6 +344,19 @@ function trackAndGo(eventName, label, url){
 </main>
 
 <script src="./common.js"></script>
+<script>
+/* ヒーロー スライドショー */
+(function(){
+  const slides = document.querySelectorAll('.hero-slide');
+  if(slides.length < 2) return;
+  let current = 0;
+  setInterval(function(){
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+  }, 5000);
+})();
+</script>
 <script>
 /* トップ：ブログ最新3件を自動表示 */
 (function () {
