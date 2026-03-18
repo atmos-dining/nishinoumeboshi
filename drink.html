@@ -6,6 +6,18 @@
   <link rel="icon" href="./favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="食堂 西のうめぼしのドリンクメニュー。オリジナルサワー、焼酎ハイボール、ビール、日本酒、ワイン、ソフトドリンクまで。">
+  <link rel="canonical" href="https://www.nishinoumeboshi.com/drink.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="食堂 西のうめぼし">
+  <meta property="og:title" content="ドリンク｜食堂 西のうめぼし">
+  <meta property="og:description" content="オリジナルサワー、焼酎ハイボール、生ビール、日本酒、ワイン、ソフトドリンクまで豊富なドリンクラインナップ。">
+  <meta property="og:url" content="https://www.nishinoumeboshi.com/drink.html">
+  <meta property="og:image" content="https://www.nishinoumeboshi.com/assets/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -192,5 +204,82 @@
 </main>
 
 <script src="./common.js"></script>
+
+<!-- 構造化データ：ドリンクメニュー -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "ドリンクメニュー",
+  "url": "https://www.nishinoumeboshi.com/drink.html",
+  "inLanguage": "ja",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "オリジナルサワー",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "沖縄んブルーレモンサワー",
+          "offers": { "@type": "Offer", "price": "490", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "山の寿 レモンサワー",
+          "offers": { "@type": "Offer", "price": "490", "priceCurrency": "JPY" }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "ハイボール",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "デュワーズ",
+          "offers": { "@type": "Offer", "price": "490", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "知多",
+          "offers": { "@type": "Offer", "price": "690", "priceCurrency": "JPY" }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "ビール",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "生ビール（パーフェクト黒ラベル）中",
+          "offers": { "@type": "Offer", "price": "590", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "サッポロ赤星（大瓶）",
+          "offers": { "@type": "Offer", "price": "590", "priceCurrency": "JPY" }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "日本酒",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "喜多屋 香田 純米（グラス）",
+          "offers": { "@type": "Offer", "price": "550", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "冩楽 純米（グラス）",
+          "offers": { "@type": "Offer", "price": "790", "priceCurrency": "JPY" }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>

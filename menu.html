@@ -6,6 +6,18 @@
   <link rel="icon" href="./favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="食堂 西のうめぼしのお料理ページ。名物の肉豆腐、ごちポテト、天ぷら・おでん、〆のちゃんぽんまで。">
+  <link rel="canonical" href="https://www.nishinoumeboshi.com/menu.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="食堂 西のうめぼし">
+  <meta property="og:title" content="お料理｜食堂 西のうめぼし">
+  <meta property="og:description" content="名物の肉豆腐、ごちポテト、天ぷら・おでん、〆のちゃんぽんまで。西新の大衆食堂のお料理メニュー。">
+  <meta property="og:url" content="https://www.nishinoumeboshi.com/menu.html">
+  <meta property="og:image" content="https://www.nishinoumeboshi.com/assets/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -154,5 +166,71 @@
 </main>
 
 <script src="./common.js"></script>
+
+<!-- 構造化データ：メニュー -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "お料理メニュー",
+  "url": "https://www.nishinoumeboshi.com/menu.html",
+  "inLanguage": "ja",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "名物料理",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "肉豆腐",
+          "offers": { "@type": "Offer", "price": "650", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "ごちポテト",
+          "offers": { "@type": "Offer", "price": "620", "priceCurrency": "JPY" }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "炙りもん",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "めざし",
+          "offers": { "@type": "Offer", "price": "330", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "きびなご炙り",
+          "offers": { "@type": "Offer", "price": "330", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "さわら西京焼",
+          "offers": { "@type": "Offer", "price": "550", "priceCurrency": "JPY" }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "あったかおつまみ",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "チキン南蛮",
+          "offers": { "@type": "Offer", "price": "610", "priceCurrency": "JPY" }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "よだれ鶏",
+          "offers": { "@type": "Offer", "price": "500", "priceCurrency": "JPY" }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body>
 </html>

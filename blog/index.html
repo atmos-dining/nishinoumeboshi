@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ブログ・お知らせ｜食堂 西のうめぼし</title>
   <meta name="description" content="食堂 西のうめぼしのブログ・お知らせ一覧。最新情報や来店前に役立つ情報を更新しています。">
+  <link rel="canonical" href="https://www.nishinoumeboshi.com/blog/">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="食堂 西のうめぼし">
+  <meta property="og:title" content="ブログ・お知らせ｜食堂 西のうめぼし">
+  <meta property="og:description" content="食堂 西のうめぼしのブログ・お知らせ一覧。最新情報や来店前に役立つ情報を更新しています。">
+  <meta property="og:url" content="https://www.nishinoumeboshi.com/blog/">
+  <meta property="og:image" content="https://www.nishinoumeboshi.com/assets/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="../favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,7 +92,7 @@
       return `
         <article class="blog-card">
           <a href="${href}">
-            <div class="blog-image" ${bg}></div>
+            <div class="blog-image" ${bg} role="img" aria-label="${esc(p.title)}"></div>
             <div class="blog-body">
               <time class="blog-date" datetime="${esc(p.date)}">${fmtDate(p.date)}</time>
               <h3 class="blog-title">${esc(p.title)}</h3>
