@@ -541,7 +541,9 @@ body:not(.is-home) .section{
 /* --------------- course --------------- */
 
 /* course: section image */
-.course-hero{
+.course-hero,
+.menu-feature-image,
+.drink-feature-image{
   margin: 18px auto 26px;
   border-radius: 16px;
   overflow: hidden;
@@ -549,7 +551,9 @@ body:not(.is-home) .section{
   max-width: 1080px;
 }
 
-.course-hero img{
+.course-hero img,
+.menu-feature-image img,
+.drink-feature-image img{
   width: 100%;
   height: auto;
   display: block;
