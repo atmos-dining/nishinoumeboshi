@@ -134,6 +134,16 @@
         if (currentPage === 'home') {
           mount.querySelectorAll('.js-hide-on-home').forEach(el => el.style.display = 'none');
         }
+
+        // bottom.html内のセクション（#access, #reserveなど）へのハッシュスクロール対応
+        // ヘッダーのfetchも含めレイアウト確定後にスクロール
+        const hash = location.hash;
+        if (hash) {
+          setTimeout(() => {
+            const target = document.querySelector(hash);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+          }, 400);
+        }
       })
       .catch(() => {});
   }
