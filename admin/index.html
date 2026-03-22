@@ -12,10 +12,11 @@
     CMS.init({
       config: {
         backend: {
-          name: 'git-gateway',
+          name: 'github',
+          repo: 'atmos-dining/nishiume-site',
           branch: 'main',
-          identity_url: 'https://quiet-lolly-639d0f.netlify.app/.netlify/identity',
-          gateway_url: 'https://quiet-lolly-639d0f.netlify.app/.netlify/git'
+          auth_type: 'pkce',
+          app_id: 'Ov23linUbwqzNKfmYhoQ'
         },
         media_folder: 'images',
         public_folder: '/images',
