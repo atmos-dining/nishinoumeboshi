@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: atmos-dining/nishiume-site
+  repo: atmos-dining/nishinoumeboshi
   branch: main
   base_url: https://sveltia-cms-auth.atmos-nextgen-team.workers.dev
 
