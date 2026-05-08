@@ -118,6 +118,7 @@
 </main>
 
 <!-- blog/posts/ は2階層下なので ../../common.js -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="../../common.js"></script>
 <script>
 (async () => {
@@ -213,7 +214,11 @@
       ? `<img src="${esc(imgSrc)}" alt="${esc(post.title)}" class="post-hero" loading="lazy">`
       : '';
 
-    const bodyHtml = post.body || `<p>${esc(post.excerpt)}</p>`;
+    // Markdown形式ならHTMLに変換、既存のHTMLはそのまま通す
+    const rawBody = post.body || `<p>${esc(post.excerpt)}</p>`;
+    const bodyHtml = (typeof marked !== 'undefined' && !rawBody.trimStart().startsWith('<'))
+      ? marked.parse(rawBody)
+      : rawBody;
 
     contentEl.innerHTML = `
       <p class="post-date">${fmtDate(post.date)}</p>
