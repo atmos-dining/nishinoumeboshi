@@ -12,9 +12,9 @@
     const observer = new MutationObserver(() => {
       if (document.getElementById('custom-add-btn')) return;
       const cmsBtns = [...document.querySelectorAll('button')];
-      const addBtn = cmsBtns.find(b =>
-        b.textContent.includes('Add') || b.textContent.includes('追加')
-      );
+      const addBtn = cmsBtns.filter(b =>
+        b.textContent.trim() === 'Add item' || b.textContent.trim() === '追加'
+      ).at(-1);
       if (!addBtn) return;
 
       const fab = document.createElement('button');
@@ -28,9 +28,9 @@
         'box-shadow:0 2px 8px rgba(0,0,0,0.3)'
       ].join(';');
       fab.onclick = () => {
-        const target = [...document.querySelectorAll('button')].find(
-          b => b !== fab && (b.textContent.includes('Add') || b.textContent.includes('追加'))
-        );
+        const target = [...document.querySelectorAll('button')].filter(
+          b => b !== fab && (b.textContent.trim() === 'Add item' || b.textContent.trim() === '追加')
+        ).at(-1);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'center' });
           setTimeout(() => target.click(), 300);
